@@ -1,12 +1,13 @@
 {
   "name": "@akalpaki/dca",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Assertions for Design by Contract",
   "main": "dca.js",
   "module": "dca.js",
   "exports": {
     ".": "./dca.js"
   },
+  "type": "module",
   "files": ["dca.js"],
   "repository": {
     "type": "git",
