@@ -2,8 +2,7 @@
   "name": "@akalpaki/dca",
   "version": "1.0.0",
   "description": "Assertions for Design by Contract",
-  "main": "dist/dca.js",
-  "module": "dist/dca.mjs",
+  "main": "dca.js",
   "repository": {
     "type": "git",
     "url": "github.com/akalpaki/dca"
@@ -12,9 +11,6 @@
     "name": "Alexios Kalpakidis",
     "email": "akalpaki@proton.me",
     "url": "https://github.com/akalpaki"
-  },
-  "scripts": {
-    "build": "npx tsup dca.ts --format esm,cjs"
   },
   "license": "MIT",
   "devDependencies": {

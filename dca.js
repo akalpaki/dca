@@ -1,5 +1,6 @@
+// TODO: JSDoc
 export class AssertionError extends Error {
-    constructor(errorMessage?: string) {
+    constructor(errorMessage) {
         const errorText = errorMessage
             ? `${errorMessage}`
             : "an assertion failed";
@@ -9,46 +10,37 @@ export class AssertionError extends Error {
     }
 }
 
-export function assert(
-    condition: boolean,
-    errorMessage?: string,
-): void | AssertionError {
+export function assert(condition, errorMessage) {
     if (!condition) {
         throw new AssertionError(errorMessage ? errorMessage : undefined);
     }
 }
 
-export function equal(a: unknown, b: unknown): void | AssertionError {
+export function equal(a, b) {
     if (a !== b) {
         throw new AssertionError(`${a} is not equal to ${b}`);
     }
 }
 
-export function notEqual(a: unknown, b: unknown): void | AssertionError {
+export function notEqual(a, b) {
     if (a === b) {
         throw new AssertionError(`${a} is equal to ${b}`);
     }
 }
 
-export function greaterThan(
-    a: number | bigint,
-    b: number | bigint,
-): void | AssertionError {
+export function greaterThan(a, b) {
     if (!(a > b)) {
         throw new AssertionError(`${a} is not greater than ${b}`);
     }
 }
 
-export function lessThan(
-    a: number | bigint,
-    b: number | bigint,
-): void | AssertionError {
+export function lessThan(a, b) {
     if (!(a < b)) {
         throw new AssertionError(`${a} is greater than ${b}`);
     }
 }
 
-export function deepEqual(a, b): void | AssertionError {
+export function deepEqual(a, b) {
     const fail = () => {
         throw new AssertionError(`deepEqual: values are not equal!`);
     };
