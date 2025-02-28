@@ -1,6 +1,6 @@
 {
   "name": "@akalpaki/dca",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Assertions for Design by Contract",
   "main": "dca.js",
   "module": "dca.js",
