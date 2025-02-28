@@ -2,7 +2,8 @@
   "name": "@akalpaki/dca",
   "version": "1.0.0",
   "description": "Assertions for Design by Contract",
-  "main": "dca.ts",
+  "main": "dist/dca.js",
+  "module": "dist/dca.mjs",
   "repository": {
     "type": "git",
     "url": "github.com/akalpaki/dca"
@@ -12,10 +13,14 @@
     "email": "akalpaki@proton.me",
     "url": "https://github.com/akalpaki"
   },
+  "scripts": {
+    "build": "npx tsup dca.ts --format esm,cjs"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.13.5",
     "eslint": "^9.21.0",
+    "tsup": "^8.4.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.25.0"
   }
